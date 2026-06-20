@@ -1,0 +1,28 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:45432/processsync
+    username: postgres
+    password: postgres
+    driver-class-name: org.postgresql.Driver
+
+agent:
+  base-url: http://localhost:8000
+
+mybatis:
+  configuration:
+    log-impl: org.apache.ibatis.logging.slf4j.Slf4jImpl
+
+logging:
+  level:
+    com.springboot.framework: DEBUG
+    org.mybatis: DEBUG
+
+cors:
+  allowed-origins:
+    # - http://localhost:3000
+    # - http://localhost:5173
+
+jwt:
+  secret: WGIF3xj0MKhfUmTG85avx+s4O20WV1RnUUSkJ6fvEeEwfTrjg9QJdIiB+CukV+hdWZzQmXoaCFkZ5rqzwq/jyA==
+  access-token-expiration: 3600000 # 1시간 (ms)
+  refresh-token-expiration: 604800000 # 7일 (ms)
